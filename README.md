@@ -1,6 +1,6 @@
 # River Connectivity Classification
 
-This repository contains the training and evaluation code for the vision-transformer and ResNet models used in the **“A framework for river connectivity classification using temporal image processing and attention based neural networks”**, published in **ACM COMPASS 2025**. To view the complete code for the project, please visit the [eco_image](https://github.com/timothyjamesbecker/eco_image/tree/master) repository.
+This repository contains the training and evaluation code for the vision-transformer and ResNet models used in the **“A framework for river connectivity classification using temporal image processing and attention based neural networks”**, published in **ACM COMPASS 2025** [[arXiv](https://arxiv.org/abs/2502.00474)]. To view the complete code for the project, please visit the [eco_image](https://github.com/timothyjamesbecker/eco_image/tree/master) repository.
 
 ---
 
