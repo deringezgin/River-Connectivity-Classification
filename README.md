@@ -15,11 +15,11 @@ This repository contains the training and evaluation code for the vision-transfo
 │   ├── vit_helper.py
 │   └── data.py
 ├── resnet/
-├── resnet_training_script.py
-├── resnet_runner.py
-├── resnet_model.py
-├── resnet_helper.py
-└── data.py
+│   ├── resnet_training_script.py
+│   ├── resnet_runner.py
+│   ├── resnet_model.py
+│   ├── resnet_helper.py
+│   └── data.py
 ```
 ---
 
@@ -53,12 +53,12 @@ python vit_helper.py 1024 2 5 '[{"1":1.0,"2":1.0},{"1":1.2,"2":1.0}]' 10 20
 
 Arguments:
 
-1. **mlp\_size** (e.g. 1024)
-2. **transformer\_count** (e.g. 2)
-3. **linear\_count** (e.g. 5)
-4. **class\_weights** JSON
-5. **patch\_size** (e.g. 10)
-6. **num\_attention\_heads** (e.g. 20)
+1. **mlp_size** (e.g. 1024)
+2. **transformer_count** (e.g. 2)
+3. **linear_count** (e.g. 5)
+4. **class_weights** JSON
+5. **patch_size** (e.g. 10)
+6. **num_attention_heads** (e.g. 20)
 
 #### Hyperparameter Testing
 
@@ -76,18 +76,16 @@ All results—weights, training/validation plots, confusion matrix, and logs—a
 
 ```bash
 cd resnet
-python resnet_helper.py \
-  64 '[3,8,36,3]' 1 \
-  '{"1":1.0,"2":1.0}' 40
+python resnet_helper.py 64 '[3,8,36,3]' 1 '{"1":1.0,"2":1.0}' 40
 ```
 
 Arguments:
 
-1. **initial\_filters** (e.g. 64)
-2. **blocks\_per\_stage** JSON list
-3. **linear\_layer\_number**
-4. **class\_weights** JSON
-5. **batch\_size**
+1. **initial_filters** (e.g. 64)
+2. **blocks_per_stage** JSON list
+3. **linear_layer_number**
+4. **class_weights** JSON
+5. **batch_size**
 
 #### Hyperparameter Testing
 
