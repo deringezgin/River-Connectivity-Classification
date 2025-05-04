@@ -14,8 +14,7 @@ This repository contains the training and evaluation code for the vision-transfo
 │   ├── vit_model.py
 │   ├── vit_helper.py
 │   └── data.py
-│
-└── resnet/
+├── resnet/
 ├── resnet_training_script.py
 ├── resnet_runner.py
 ├── resnet_model.py
@@ -49,9 +48,7 @@ Adjust the `USE_HIGH_RES` & `SPLIT_SIX_CATEGORIES` parameters and folder names i
 
 ```bash
 cd vision-transformer
-python vit_helper.py 1024 2 5 \
-  '[{"1":1.0,"2":1.0},{"1":1.2,"2":1.0}]' \
-  10 20
+python vit_helper.py 1024 2 5 '[{"1":1.0,"2":1.0},{"1":1.2,"2":1.0}]' 10 20
 ```
 
 Arguments:
@@ -66,13 +63,7 @@ Arguments:
 #### Hyperparameter Testing
 
 ```bash
-python vit_runner.py \
-  --mlp_size 1024,2048 \
-  --transformer_count 1,2 \
-  --linear_count 3,4,5 \
-  --class_weights '[{"1":1.0,"2":1.0},{"1":1.2,"2":1.0}]' \
-  --patch_size 10,20 \
-  --num_attention_heads 20,24,30
+python vit_runner.py --mlp_size 1024,2048 --transformer_count 1,2 --linear_count 3,4,5 --class_weights '[{"1":1.0,"2":1.0},{"1":1.2,"2":1.0}]' --patch_size 10,20 --num_attention_heads 20,24,30
 ```
 
 All results—weights, training/validation plots, confusion matrix, and logs—are saved under `../RESULTS/<run_folder>`.
